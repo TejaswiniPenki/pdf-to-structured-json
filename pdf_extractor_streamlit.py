@@ -8,7 +8,7 @@ import os
 
 # ---- Gemini Pro Setup ----
 genai.configure(api_key=os.getenv("GEMINI_API_KEY"))  # OR manually set your key here
-model = genai.GenerativeModel("gemini-pro")
+model = ChatGoogleGenerativeAI(model="gemini-pro", temperature=0.3)
 
 # ---- Helper: Extract text ----
 def extract_text_from_pdf(uploaded_file):
